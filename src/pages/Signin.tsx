@@ -41,65 +41,75 @@ export function Signin() {
     validate,
     onSubmit: (values) => {
       const data = JSON.stringify(values, null, 2);
+      console.log(JSON.parse(data));
     },
   });
   return (
     <>
       <Row className="ctn">
         <Col xl={8} lg={8} md={8} sm={8}>
-          <Container className="wrapper p-5 w-50">
+          <Container className="vh-100 p-5 w-50 d-flex justify-content-between align-items-center flex-column ">
             <header>
               <h1 className="hook-1">OrionsHook</h1>
               <h3 className="hook-2">Sign In</h3>
             </header>
             <Container className="mr-50 p-5">
-              <Form onSubmit={formik.handleSubmit}>
-                <div className="test-1">
-                  <FaUser style={{ fontSize: "20px" }} />
-                  <Form.Control
-                    className="nofocus"
-                    style={{
-                      border: "none",
-                      borderBottom: "0.5px solid black",
-                      borderRadius: 0,
-                    }}
-                    id="email"
-                    // className="fs-3"
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.email}
-                  />
-                  {formik.touched.email && formik.errors.email ? (
-                    <div className="errorsText">{formik.errors.email}</div>
-                  ) : null}
-                </div>
-                <div className="test-1">
-                  <FaLock style={{ fontSize: "20px" }} />
-                  <Form.Control
-                    style={{
-                      border: "none",
-                      borderBottom: "0.5px solid black",
-                      borderRadius: 0,
-                    }}
-                    id="password"
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.password}
-                  />
-                  {formik.touched.password && formik.errors.password ? (
-                    <div className="errorsText">{formik.errors.password}</div>
-                  ) : null}
-                </div>
+              <Form
+                className="d-flex justify-content-center align-items-center flex-column"
+                onSubmit={formik.handleSubmit}
+              >
+                <section>
+                  <div className="test-1">
+                    <FaUser style={{ fontSize: "20px" }} />
+                    <Form.Control
+                      className="nofocus"
+                      style={{
+                        border: "none",
+                        borderBottom: "0.5px solid black",
+                        borderRadius: 0,
+                      }}
+                      id="email"
+                      // className="fs-3"
+                      name="email"
+                      type="email"
+                      placeholder="Email"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.email}
+                    />
+                    {formik.touched.email && formik.errors.email ? (
+                      <div>
+                        <br />
+                        <div className="errorsText">{formik.errors.email}</div>
+                      </div>
+                    ) : null}
+                  </div>
+                  <div className="test-1">
+                    <FaLock style={{ fontSize: "20px" }} />
+                    <Form.Control
+                      style={{
+                        border: "none",
+                        borderBottom: "0.5px solid black",
+                        borderRadius: 0,
+                      }}
+                      id="password"
+                      name="password"
+                      type="password"
+                      placeholder="Password"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.password}
+                    />
+                    {formik.touched.password && formik.errors.password ? (
+                      <div className="errorsText">{formik.errors.password}</div>
+                    ) : null}
+                  </div>
+                </section>
                 <button className="mybutton" type="submit">
                   Submit
                 </button>
               </Form>
+              <p className="hook-3">Forgot your password?</p>
             </Container>
             {/* <Container className="input mr-50 p-5">
               <div>
@@ -119,7 +129,7 @@ export function Signin() {
                 />
               </div>
             </Container> */}
-            <p className="hook-3">Forgot your password?</p>
+
             <footer className="hook-4">
               Made with <FaHeart style={{ color: "red" }} /> at Orions IT
               Solutons

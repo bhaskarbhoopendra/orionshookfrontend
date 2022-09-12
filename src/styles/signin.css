@@ -7,8 +7,8 @@
 }
 
 .ctn {
-  height: 624px;
-  width: 1378px;
+  height: 100vh;
+  width: 100vw;
 }
 .wrapper {
   display: flex;
@@ -72,7 +72,7 @@
   margin-top: 30px;
 }
 
-.hook-4 {
+/* .hook-4 {
   width: 290px;
   text-align: center;
   align-items: baseline;
@@ -81,7 +81,7 @@
   color: #5f5e5e;
   opacity: 1;
   margin-bottom: 0px;
-}
+} */
 .hook-5 {
   top: 258px;
   width: 244px;

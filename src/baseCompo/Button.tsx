@@ -1,8 +1,8 @@
-import "../baseCompo/btnstyles.css"
+import "../styles/btnstyles.css"
 
 
-export default function ButtonComponent({text}: any) {
+export default function ButtonComponent({text, type}: any) {
   return (
-  <button className="bttn">{text}</button>
+  <button type={type} className="bttn">{text}</button>
   )
 }

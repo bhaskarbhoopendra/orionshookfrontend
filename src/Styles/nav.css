@@ -1,0 +1,62 @@
+.main {
+    display: flex;
+    width: auto;
+    height: 81px;
+    background: transparent linear-gradient(90deg, #11273C 0%, #1D639F 100%) 0% 0% no-repeat padding-box;
+    font: optional;
+    opacity: 1;
+}
+
+.square{
+    top: 24px;
+    left: 23px;
+    width: 32px;
+    height: 32px;
+/* UI Properties */
+    opacity: 1;
+    margin-left: 50px;
+}
+
+.form {
+    position: relative;
+    top: 16px;
+    left: 344px;
+    width: 753px;
+    height: 50px;
+    background: transparent linear-gradient(180deg, #E0D3E9 0%, #3C244B 100%) 0% 0% no-repeat padding-box;
+    border-radius: 21px;
+    opacity: 0.15;
+    margin-bottom: 20px;
+}
+
+.search{
+
+    margin-top: 1px;
+    margin-left: 15px;
+    border: none;
+    border-bottom: 5px;
+
+}
+
+.bell {
+    top: 32px;
+    left: 1278px;
+    width: 20px;
+    height: 20px;
+    color: #E0D3E9;
+    opacity: 1;
+    margin-left: 550px;
+    margin-top: 25px;
+}
+
+.circle {
+    top: 30px;
+    left: 1318px;
+    width: 25px;
+    height: 25px;
+    /* UI Properties */
+    color: #E0D3E9;
+    opacity: 1;
+    margin-top: 20px;
+    margin-left: 35px;
+}

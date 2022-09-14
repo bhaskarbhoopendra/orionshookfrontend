@@ -1,0 +1,40 @@
+
+  *:focus {
+    outline: none;
+  }
+  .head{
+    text-align: left;
+    font: normal normal bold 26px/31px Roboto;
+    letter-spacing: 0px;
+    color: #4B4A4A;
+    opacity: 1
+  }
+  .sub{
+    text-align: left;
+    font: normal normal bold 24px/29px Roboto;
+    letter-spacing: 0px;
+    color: #4B4A4A;
+    opacity: 1;
+  }
+  .firstctn{
+    background: #EDF8FE 0% 0% no-repeat padding-box;
+    opacity: 1;
+    /* width: 2000px; */
+  }
+  .secondctn{
+    /* height: 1380px; */
+    margin: 0px;
+    /* padding: 50px; */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 25px #00000029;
+    opacity: 1;
+  }
+  .lbl{
+    font: normal normal bold 18px/22px Roboto;
+    color: #1D639F;
+    opacity: 1;
+  }
+  .errorsText {
+    color: red;
+  }
+  

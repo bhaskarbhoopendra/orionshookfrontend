@@ -5,7 +5,7 @@ import { ButtonComponent } from "../basecomponents/Button";
 import { FaHeart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
-import "../Styles/signup.css";
+import "../styles/signup.css";
 // import { InputComponent } from "../basecomponents/inputcomponent";
 
 export function Signup() {

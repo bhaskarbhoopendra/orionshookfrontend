@@ -2,7 +2,7 @@ import { Col, Container, Row, Form } from "react-bootstrap";
 import { FaHeart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
-import "../Styles/signin.css";
+import "../styles/signin.css";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 

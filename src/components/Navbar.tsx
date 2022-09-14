@@ -1,92 +1,48 @@
-import { Container, Figure, Form, Nav, Navbar as NavbarBs } from "react-bootstrap";
+import { Container, Form, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import "../Styles/nav.css";
 import { FaBell, FaCircle, FaSquare, FaSearch } from "react-icons/fa";
 
-// import { useForm } from 'react-hook-form'
-
-// import { Group_18 } from "../Navcomponent/group";
 
 
-export function Navbar() {
-    // const {Search} = useForm()  
+export function Navbar() {  
     return (
-        <>
+        
             <>
                 <div className="main" >
                     <NavbarBs expand="lg" >
                         <Container>
                             <FaSquare className="square" />
-
-
+                            <img
+                                className="logo"
+                                src="https://media-exp1.licdn.com/dms/image/C4E0BAQGeIUP3WV-37w/company-logo_200_200/0/1607729895661?e=1666224000&v=beta&t=jyYJdOttJYr8-qpBju6gUo45dgsEPit0MAtRCBRj8Jc"
+                                alt="LOGO"
+                            />
                             <NavbarBs.Brand href="/home" >
-                            <Figure>
-                                <Figure.Image
-                                    
-                                    alt="LOGO"
-                                    src="logo.png"
-                                />
-                            </Figure>
                             </NavbarBs.Brand>
-                            {/* <NavbarBs.Toggle aria-controls="basic-navbar-nav" /> */}
                             <NavbarBs.Collapse id="basic-navbar-nav">
                                 <Nav className="me-auto">
-                                    
 
-                                    <Form  className="form" >
-                                    <FaSearch className="search" />
-                                        <Form.Control 
-                                        type="search"
-                                        placeholder="Search by Employee name with Designation or department"
-                                        aria-label="Search"
-                                        />
-
-                                    </Form>
-
-                                    {/* <Form className="d-flex">
+                                    <Form className="form" >
+                                        {/* <FaSearch /> */}
                                         <Form.Control
-
-                                            type="Search"
+                                            className="search"
+                                            type="search"
                                             placeholder="Search by Employee name with Designation or department"
-                                            className="me-2"
-                                            aria-label="Searc   h" />
-                                    </Form> */}
+                                            style={{ border: "none", borderBottom: "0.5px solid black" }}
+                                            // aria-label="Search"
+                                        />
+                                    </Form>
 
                                     <FaBell className="bell" />
                                     <FaCircle className="circle" />
-                                    
-
                                 </Nav>
                             </NavbarBs.Collapse>
                         </Container>
                     </NavbarBs>
                 </div>
-            </></>
+            </>
     );
 }
-
-
-
-{/* <i className="fa-regular fa-bell"></i> */ }
-
-{/* <div>
-    <FontAwesomeIcon icon="fa-regular fa-bell" />
-    </div> */}
-
-{/* <Button variant="outline-success">Search</Button> */ }
-
-
-{/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-      <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-      <NavDropdown.Item href="#action/3.2">
-        Another action
-      </NavDropdown.Item>
-      <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-      <NavDropdown.Divider />
-      <NavDropdown.Item href="#action/3.4">
-        Separated link
-      </NavDropdown.Item>
-    </NavDropdown> */}
-
 function useForm(): { Search: any; } {
     throw new Error("Function not implemented.");
 }

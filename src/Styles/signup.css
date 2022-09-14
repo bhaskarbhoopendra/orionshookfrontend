@@ -1,0 +1,71 @@
+.contain1 {
+  left: 800px;
+  width: 450px;
+  height: 650px;
+  background: transparent linear-gradient(180deg, #1d639f 0%, #11273c 100%) 0%
+    0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 0.8;
+  /* overflow:auto; */
+}
+.welcome {
+  top: 258px;
+  left: 147px;
+  width: 207px;
+  height: 37px;
+  text-align: left;
+  font: normal normal bold 30px/37px Roboto;
+  letter-spacing: 0px;
+  color: #f5f9fb;
+  opacity: 1;
+  padding-top: 50px;
+  padding-left: 100px;
+  font-family: Roboto;
+}
+
+.text {
+  /* Layout Properties */
+  top: 372px;
+  /* left: 100px; */
+  width: 400px;
+  height: 24px;
+  /* UI Properties */
+  /* display: flex;
+        justify-content: center; */
+  text-align: center;
+  font: normal normal medium 20px/24px Roboto;
+  letter-spacing: 0px;
+  color: #fbf9f9;
+  opacity: 1;
+  padding-top: 100px;
+  padding-right: 80px;
+  padding-left: 50px;
+  font-family: Roboto;
+}
+.butt1 {
+  margin-top: 100px;
+  padding-left: 50px;
+  /* justify-items: center; */
+}
+.form {
+  outline: none;
+  font-family: Roboto;
+  margin-top: 30px;
+}
+.heart {
+  margin-top: 170px;
+  font-family: Roboto;
+}
+.subhead {
+  color: #1d639f;
+  margin-left: 40px;
+  font-family: Roboto;
+}
+.head {
+  margin-left: 20px;
+  font-family: Roboto;
+}
+.mail {
+  border: none;
+  border-bottom: 0.5px solid;
+}

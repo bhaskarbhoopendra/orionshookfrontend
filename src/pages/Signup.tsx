@@ -5,10 +5,10 @@ import { ButtonComponent } from "../basecomponents/Button";
 import { FaHeart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
-import "../Styles/sign.css";
+import "../Styles/signup.css";
 // import { InputComponent } from "../basecomponents/inputcomponent";
 
-export function Sign() {
+export function Signup() {
   const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
@@ -42,7 +42,9 @@ export function Sign() {
               To keep connected with us please login with your personal info
             </h5>
             <div className="butt1">
-              <ButtonComponent text="SignIn" />
+              <a href="/signin">
+                <ButtonComponent text="SignIn" />
+              </a>
             </div>
           </Container>
         </Col>
@@ -66,8 +68,6 @@ export function Sign() {
                 </div>
               </Form.Group>
               <Form.Group className="mb-3" controlId="password">
-                {/* <Form.Label>Password</Form.Label> */}
-                {/* <InputComponent /> */}
                 <div className="d-flex">
                   <FaLock className="fs-2" />
                   <Form.Control
@@ -78,8 +78,6 @@ export function Sign() {
                 </div>
               </Form.Group>
               <Form.Group className="mb-3" controlId="confirmpassword">
-                {/* <Form.Label>Confirm Password</Form.Label> */}
-                {/* <InputComponent /> */}
                 <div className="d-flex">
                   <FaLock className="fs-2" />
                   <Form.Control

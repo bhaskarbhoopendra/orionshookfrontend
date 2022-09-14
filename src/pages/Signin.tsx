@@ -1,21 +1,13 @@
 import { Col, Container, Row, Form } from "react-bootstrap";
-import { ButtonComponent } from "../basicComponents/button";
-import { InputComponent } from "../basicComponents/inputComponent";
-// import { IconName } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
-import "../styles/signin.css";
+import "../Styles/signin.css";
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 
 const validate = (values: any) => {
   const errors = {} as any;
-
-  //   if (!values.email) {
-  //     errors.email = "Required";
-  //   } else if (values.email.length > 15) {
-  //     errors.firstName = "Must be 15 characters or less";
-  //   }
 
   if (!values.password) {
     errors.password = "Required";
@@ -33,6 +25,8 @@ const validate = (values: any) => {
 };
 
 export function Signin() {
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -42,34 +36,39 @@ export function Signin() {
     onSubmit: (values) => {
       const data = JSON.stringify(values, null, 2);
       console.log(JSON.parse(data));
+      navigate("/forms");
     },
   });
   return (
     <>
-      <Row className="ctn">
-        <Col xl={8} lg={8} md={8} sm={8}>
+      {/* <Container> */}
+      <Row className="vw-100">
+        <Col xl={8} lg={8} md={7} sm={12}>
           <Container className="vh-100 p-5 w-50 d-flex justify-content-between align-items-center flex-column ">
             <header>
-              <h1 className="hook-1">OrionsHook</h1>
+              <h1 style={{ font: "normal normal bold 40px/40px Helvetica" }}>
+                OrionsHook
+              </h1>
+              <br />
+              <br />
               <h3 className="hook-2">Sign In</h3>
             </header>
-            <Container className="mr-50 p-5">
+            <Container className="mt-5">
               <Form
                 className="d-flex justify-content-center align-items-center flex-column"
                 onSubmit={formik.handleSubmit}
               >
-                <section>
-                  <div className="test-1">
-                    <FaUser style={{ fontSize: "20px" }} />
+                <section className="d-flex flex-column">
+                  <Form.Group className="d-flex justify-content-end align-items-center">
+                    <FaUser className="col-lg-5" style={{ fontSize: "30px" }} />
                     <Form.Control
-                      className="nofocus"
+                      className="nofocus col-lg-5"
                       style={{
                         border: "none",
                         borderBottom: "0.5px solid black",
                         borderRadius: 0,
                       }}
                       id="email"
-                      // className="fs-3"
                       name="email"
                       type="email"
                       placeholder="Email"
@@ -77,16 +76,17 @@ export function Signin() {
                       onBlur={formik.handleBlur}
                       value={formik.values.email}
                     />
+                  </Form.Group>
+                  <div className="d-flex justify-content-center">
                     {formik.touched.email && formik.errors.email ? (
-                      <div>
-                        <br />
-                        <div className="errorsText">{formik.errors.email}</div>
-                      </div>
+                      <div className="errorsText">{formik.errors.email}</div>
                     ) : null}
                   </div>
-                  <div className="test-1">
-                    <FaLock style={{ fontSize: "20px" }} />
+                  <br />
+                  <Form.Group className="d-flex justify-content-end align-items-center">
+                    <FaLock className="col-lg-5" style={{ fontSize: "25px" }} />
                     <Form.Control
+                      className="col-lg-5"
                       style={{
                         border: "none",
                         borderBottom: "0.5px solid black",
@@ -100,6 +100,8 @@ export function Signin() {
                       onBlur={formik.handleBlur}
                       value={formik.values.password}
                     />
+                  </Form.Group>
+                  <div className="d-flex justify-content-center ">
                     {formik.touched.password && formik.errors.password ? (
                       <div className="errorsText">{formik.errors.password}</div>
                     ) : null}
@@ -109,47 +111,43 @@ export function Signin() {
                   Submit
                 </button>
               </Form>
-              <p className="hook-3">Forgot your password?</p>
             </Container>
-            {/* <Container className="input mr-50 p-5">
-              <div>
-                <FaUser />{" "}
-                <InputComponent
-                  typeOfInput="text"
-                  inputName="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div>
-                <FaLock />{" "}
-                <InputComponent
-                  typeOfInput="password"
-                  inputName="password"
-                  placeholder="Password"
-                />
-              </div>
-            </Container> */}
+            <p className="hook-3">Forgot your password?</p>
 
-            <footer className="hook-4">
+            <footer>
               Made with <FaHeart style={{ color: "red" }} /> at Orions IT
               Solutons
             </footer>
           </Container>
         </Col>
 
-        {/* Secod column starts here */}
-        <Col xl={4} lg={4} md={4} sm={4} className="column-2">
-          <Container className="p-1 w-50">
+        {/* Second column starts here */}
+
+        <Col xl={4} lg={4} md={5} sm={12} className="second-col">
+          <Container className="pt-5 mt-5 d-flex align-items-center flex-column justify-content-center">
             <section>
-              <p className="hook-5">Hello, Friend!</p>
-              <p className="hook-6">
+              <p
+                className="d-flex justify-content-center"
+                style={{
+                  font: "normal normal bold 30px/37px Helvetica",
+                  color: "#f5f9fb",
+                }}
+              >
+                Hello, Friend!
+              </p>
+              <p className="comment">
                 Enter your personal details and start journey with us
               </p>
             </section>
-            <button className="mybutton">Sign Up</button>
+            <section className="d-flex align-items-end">
+              <a href="/signup">
+                <button className="mybutton">Sign Up</button>
+              </a>
+            </section>
           </Container>
         </Col>
       </Row>
+      {/* </Container> */}
     </>
   );
 }

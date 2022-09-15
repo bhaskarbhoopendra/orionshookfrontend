@@ -4,6 +4,7 @@ import Forms from "./pages/Forms";
 import { Home } from "./pages/Home";
 import { Signup } from "./pages/Signup";
 import { Signin } from "./pages/Signin";
+import LeaveForm from "./pages/LeaveModal";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/forms" element={<Forms />} />
       <Route path="/signin" element={<Signin />} />
+      <Route path="/leave" element={<LeaveForm />} />
     </Routes>
   );
 }

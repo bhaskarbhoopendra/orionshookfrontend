@@ -1,0 +1,41 @@
+.header{
+    text-align: left;
+    font: normal normal medium 20px/24px Roboto;
+    color: #11273C;
+    opacity: 1;
+}
+.lbl{
+    text-align: left;
+    font: normal normal medium 15px/18px Roboto;
+    color: #164772;
+    opacity: 1;
+  }
+.close{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #287FC6;
+    opacity: 1;
+}
+.btntxt{
+    text-align: left;
+    font: normal normal medium 15px/18px Roboto;
+    color: #287FC6;
+    opacity: 1;
+}
+.subbtn{
+    background: #287FC6 0% 0% no-repeat padding-box;
+    border: 1px solid #287FC6;
+    border-radius: 7px;
+    opacity: 1;
+}
+.subtxt{
+    text-align: left;
+    font: normal normal medium 15px/18px Roboto;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.lbl2{
+    text-align: left;
+    font: normal normal medium 15px/18px Roboto;
+    color: #4B4A4A;
+    opacity: 1;
+}

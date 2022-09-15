@@ -265,7 +265,7 @@ export default function Forms() {
                             borderRadius: 0,
                           }}
                       >
-                        <option>Choose Below</option> //disable choose below
+                        <option value="" disabled selected>Choose Below</option>
                         <option>A+</option>
                         <option>A-</option>
                         <option>B+</option>
@@ -349,7 +349,7 @@ export default function Forms() {
                             borderRadius: 0,
                           }}
                       >
-                        <option>Choose Below</option>
+                        <option value="" disabled selected>Choose Below</option>
                         <option>Indian</option>
                         <option>Foreign</option>
                         </Form.Select>
@@ -398,7 +398,7 @@ export default function Forms() {
                             borderRadius: 0,
                           }}
                           >
-                          <option>Choose Below</option>
+                          <option value="" disabled selected>Choose Below</option>
                            <option>Male</option>
                            <option>Female</option>
                            <option>Trans</option>

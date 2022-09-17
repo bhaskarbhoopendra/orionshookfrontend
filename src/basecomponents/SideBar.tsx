@@ -8,18 +8,19 @@ import {
 import { GiMoneyStack, GiCycle } from "react-icons/gi";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { FcCalendar } from "react-icons/fc";
-import "../styles/sideBar.css";
 import { Col, Row } from "react-bootstrap";
+import "../styles/sideBar.css";
 
 export function SideBar() {
   return (
     <>
       <Row>
-        <Col
-          xl={2}
-          className="d-flex flex-column"
-          style={{ backgroundColor: "#EDF8FE" }}
-        >
+        <Col xl={2} className="sidecol d-flex flex-column">
+          <br />
+          <br />
+          <br />
+          <br />
+          <hr />
           <FaRegUserCircle style={{ fontSize: "30px" }} />
           <GiMoneyStack style={{ fontSize: "30px" }} />
           <FaHandHoldingUsd style={{ fontSize: "30px" }} />

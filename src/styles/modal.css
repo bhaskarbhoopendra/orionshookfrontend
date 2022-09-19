@@ -14,6 +14,7 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #287FC6;
     opacity: 1;
+    border-radius: 7px;
 }
 .btntxt{
     text-align: left;
@@ -39,3 +40,6 @@
     color: #4B4A4A;
     opacity: 1;
 }
+.errorsText {
+    color: red;
+  }

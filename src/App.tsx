@@ -1,33 +1,33 @@
-import { Route, Routes } from "react-router-dom";
-import Forms from "./pages/Forms";
+import { Route, Routes, useLocation } from "react-router-dom";
 // import { Navbar } from "./components/Navbar";
-import { Home } from "./pages/Home";
 import { Signup } from "./pages/Signup";
 import { Signin } from "./pages/Signin";
-
-import { Row, Col } from "react-bootstrap";
-import { SideBar } from "./basecomponents/SideBar";
-import Attendance from "./pages/Attendance";
+import Dash from "./basecomponents/Dash";
+import SideBar from "./basecomponents/SideBar";
 
 function App() {
+  const location = useLocation();
+  localStorage.setItem("user", "1")
+  const pathName = location.pathname;
+  console.log({pathName})
+  const localStorageUser:any = localStorage.getItem("user")
+  const isUserAvaiable = JSON.parse(localStorageUser);
+  console.log({isUserAvaiable})
   return (
-//     <Row>
-//       <Col xl={3}>
-//         <SideBar/>
-// 
-//       </Col>
-//       <Col xl={9}>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/forms" element={<Forms />} />
-      <Route path="/signin" element={<Signin />} />
-      <Route path="/attendance" element={<Attendance />} />
-      <Route path="/signup" element={<SideBar />} />
-    
-    </Routes>
-    // </Col>
-    // </Row>
+    <div>
+      {
+        isUserAvaiable !==1 ?  <Routes>
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        </Routes> 
+        :
+        <div className="d-flex">
+          <SideBar/>
+          <Dash/>
+        </div>
+      }    
+      
+    </div>
   );
 }
 

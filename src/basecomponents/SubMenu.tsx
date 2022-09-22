@@ -1,47 +1,40 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
-import { Collapse, NavItem } from "reactstrap";
+import { Collapse, NavItem, NavLink } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom";
-import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-export default function SubMenu(props: any) {
+const SubMenu = (props) => {
   const [collapsed, setCollapsed] = useState(true);
   const toggle = () => setCollapsed(!collapsed);
   const { icon, title, items } = props;
 
   return (
     <div>
-      <span>
-        <NavItem
-          onClick={toggle}
-          className={classNames({ "menu-open": !collapsed })}
-        >
-          <Nav.Link style={{ color: "#4B4A4A" }} className="dropdown-toggle">
-            <FontAwesomeIcon icon={icon} className="me-3" />
-            {title}
-          </Nav.Link>
-        </NavItem>
-      </span>
+      <NavItem
+        onClick={toggle}
+        className={classNames({ "menu-open": !collapsed })}
+      >
+        <NavLink className="dropdown-toggle">
+          <FontAwesomeIcon icon={icon} className="mr-2" />
+          {title}
+        </NavLink>
+      </NavItem>
       <Collapse
         isOpen={!collapsed}
         navbar
         className={classNames("items-menu", { "mb-1": !collapsed })}
       >
-        {items.map((item: any, index: any) => {
-          return (
-            <NavItem key={index} className="pl-4">
-              <Nav.Link
-                style={{ color: "#4B4A4A" }}
-                to={item.target}
-                as={NavLink}
-              >
-                {item.title}
-              </Nav.Link>
-            </NavItem>
-          );
-        })}
+        {items.map((item, index) => (
+          <NavItem key={index} className="pl-4">
+            <NavLink tag={Link} to={item.target}>
+              {item.title}
+            </NavLink>
+          </NavItem>
+        ))}
       </Collapse>
     </div>
   );
-}
+};
+
+export default SubMenu;

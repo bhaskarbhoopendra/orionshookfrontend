@@ -5,7 +5,7 @@ import Dash from "./basecomponents/Dash";
 import SideBar from "./basecomponents/SideBar";
 import "./styles/app.css";
 
-function App() {
+export default function App() {
   const location = useLocation();
   localStorage.setItem("user", "1");
   const pathName = location.pathname;
@@ -29,5 +29,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

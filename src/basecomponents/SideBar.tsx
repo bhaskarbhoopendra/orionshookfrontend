@@ -9,17 +9,22 @@ import classNames from "classnames";
 import SubMenu from "./SubMenu";
 import { NavLink } from "react-router-dom";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
+import ProfileComponent from "./ProfileComponent";
 
 export default function SideBar({ isOpen, toggle }: any) {
   return (
     <>
       <div className={classNames("sidebar", { "is-open": isOpen })}>
         <div className="sidebar-header">
-          {/* <span color="info" onClick={toggle} style={{ color: "#fff" }}>
-            &times;
-          </span> */}
-          <h3>Profile is displayed</h3>
-          <hr style={{ border: ".5px solid #707070" }} />
+          <ProfileComponent />
+
+          <hr
+            style={{
+              border: ".5px solid #707070",
+              width: "80%",
+              marginLeft: "25px",
+            }}
+          />
         </div>
         <div className="side-menu">
           <Nav className="pb-3 d-flex flex-column ">

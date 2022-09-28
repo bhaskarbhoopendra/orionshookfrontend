@@ -120,9 +120,7 @@ export function Signin() {
             </footer>
           </Container>
         </Col>
-
-        {/* Second column starts here */}
-
+        /* Second column starts here */
         <Col xl={4} lg={4} md={5} sm={12} className="second-col">
           <Container className="pt-5 mt-5 d-flex align-items-center flex-column justify-content-center">
             <section>
